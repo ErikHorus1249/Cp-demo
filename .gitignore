@@ -1,0 +1,19 @@
+# Documentation build output
+/docs/_build
+
+.DS_Store
+*.idea
+**/*.crt
+**/*.csr
+**/*_creds
+**/*.jks
+**/*.srl
+**/*.key
+**/*.req
+**/*.pem
+**/*.der
+**/*.p12
+**/keypair/
+ui/expanded
+*.zip
+*.log
