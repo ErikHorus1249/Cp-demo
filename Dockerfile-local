@@ -37,5 +37,6 @@ RUN confluent-hub install --no-prompt confluentinc/kafka-connect-elasticsearch:1
 # Add JDK default cacerts to kafka.connect.truststore.jks to allow outgoing HTTPS
 COPY scripts/security/kafka.connect.truststore.jks /tmp/kafka.connect.truststore.jks
 USER root
-RUN keytool -importkeystore -srckeystore /usr/lib/jvm/zulu11-ca/lib/security/cacerts -srcstorepass changeit -destkeystore /tmp/kafka.connect.truststore.jks -deststorepass confluent -keypass confluent
+RUN keytool -importkeystore -srckeystore /usr/lib/jvm/zulu11-ca/lib/security/cacerts -srcstorepass changeit -destkeystore /tmp/kafka.connect.truststore.jks -deststorepass aisresearch -keypass ai
+
 USER appuser
